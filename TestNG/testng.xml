@@ -1,0 +1,25 @@
+<suite name="DemoTestNG" verbose="3"  parallel="classes" thread-count="2">   
+  	<test name="Firefox test on local">
+  		<parameter name="browser" value="Firefox"/>
+  		<parameter name="version" value="Any"/>
+  		<parameter name="platform" value="Any"/>
+  		<parameter name="nodeUrl" value="http://192.168.1.127:5556/wd/hub"/>
+  		<parameter name="baseUrl" value="http://www.google.com.vn"/>
+    	<classes>
+      		<class name="test.TC_1"/>
+	  		<class name="test.TC_2"/>
+    	</classes>
+ 	</test>
+ 	
+ 	<test name="Chrome test on remote">
+  		<parameter name="browser" value="Chrome"/>
+  		<parameter name="version" value="Any"/>
+  		<parameter name="platform" value="Any"/>
+  		<parameter name="nodeUrl" value="http://192.168.1.50:5000/wd/hub"/>
+  		<parameter name="baseUrl" value="http://www.google.com.vn"/>
+    	<classes>
+      		<class name="test.TC_1"/>
+	  		<class name="test.TC_2"/>
+    	</classes>
+ 	</test>
+ </suite>

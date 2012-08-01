@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="2" failed="0" total="4" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="DemoTestNG" duration-ms="6625" started-at="2012-07-30T08:18:35Z" finished-at="2012-07-30T08:18:42Z">
+    <groups>
+    </groups>
+    <test name="Firefox test on local" duration-ms="435" started-at="2012-07-30T08:18:35Z" finished-at="2012-07-30T08:18:35Z">
+      <class name="test.TC_1">
+        <test-method status="FAIL" signature="beforeClass(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.TC_1@7f70888e]" name="beforeClass" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Any]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Any]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://192.168.1.127:5556/wd/hub]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[http://www.google.com.vn]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.24.1', revision: '17205', time: '2012-06-19 16:53:24'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.7.2', java.version: '1.6.0_29'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.24.1', revision: '17205', time: '2012-06-19 16:53:24'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.7.2', java.version: '1.6.0_29'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:467)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:155)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:107)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:115)
+	at test.TC_Base.beforeClass(TC_Base.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connection to http://192.168.1.127:5556 refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:150)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:575)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:319)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:297)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:446)
+	... 17 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:529)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:123)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:148)
+	... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:test.TC_1@7f70888e]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:test.TC_1@7f70888e]" name="afterMethod" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="test()[pri:0, instance:test.TC_1@7f70888e]" name="test" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:test.TC_1@7f70888e]" name="afterClass" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.TC_1 -->
+      <class name="test.TC_2">
+        <test-method status="FAIL" signature="beforeClass(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.TC_2@7786df0f]" name="beforeClass" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Any]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Any]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://192.168.1.127:5556/wd/hub]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[http://www.google.com.vn]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.remote.UnreachableBrowserException">
+            <message>
+              <![CDATA[Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.24.1', revision: '17205', time: '2012-06-19 16:53:24'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.7.2', java.version: '1.6.0_29'
+Driver info: driver.version: RemoteWebDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '2.24.1', revision: '17205', time: '2012-06-19 16:53:24'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.7.2', java.version: '1.6.0_29'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:467)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:155)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:107)
+	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:115)
+	at test.TC_Base.beforeClass(TC_Base.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:175)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:107)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+	at java.lang.Thread.run(Thread.java:680)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connection to http://192.168.1.127:5556 refused
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:158)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:150)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:575)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+	at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+	at org.openqa.selenium.remote.HttpCommandExecutor.fallBackExecute(HttpCommandExecutor.java:319)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:297)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:446)
+	... 17 more
+Caused by: java.net.ConnectException: Connection refused
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
+	at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:213)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:432)
+	at java.net.Socket.connect(Socket.java:529)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:123)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:148)
+	... 25 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.remote.UnreachableBrowserException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="SKIP" signature="beforeMethod()[pri:0, instance:test.TC_2@7786df0f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="test()[pri:0, instance:test.TC_2@7786df0f]" name="test" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="SKIP" signature="afterClass()[pri:0, instance:test.TC_2@7786df0f]" name="afterClass" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="SKIP" signature="afterMethod()[pri:0, instance:test.TC_2@7786df0f]" name="afterMethod" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- test.TC_2 -->
+    </test> <!-- Firefox test on local -->
+    <test name="Chrome test on remote" duration-ms="6141" started-at="2012-07-30T08:18:35Z" finished-at="2012-07-30T08:18:42Z">
+      <class name="test.TC_1">
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.TC_1@625dcec6]" name="beforeClass" is-config="true" duration-ms="1884" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Any]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Any]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://192.168.1.50:5000/wd/hub]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[http://www.google.com.vn]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.TC_1@625dcec6]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2012-07-30T15:18:37Z" finished-at="2012-07-30T15:18:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="test()[pri:0, instance:test.TC_1@625dcec6]" name="test" duration-ms="3458" started-at="2012-07-30T15:18:37Z" finished-at="2012-07-30T15:18:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.TC_1@625dcec6]" name="afterClass" is-config="true" duration-ms="796" started-at="2012-07-30T15:18:41Z" finished-at="2012-07-30T15:18:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.TC_1@625dcec6]" name="afterMethod" is-config="true" duration-ms="0" started-at="2012-07-30T15:18:41Z" finished-at="2012-07-30T15:18:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- test.TC_1 -->
+      <class name="test.TC_2">
+        <test-method status="PASS" signature="beforeClass(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.TC_2@4430d82d]" name="beforeClass" is-config="true" duration-ms="1883" started-at="2012-07-30T15:18:35Z" finished-at="2012-07-30T15:18:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Any]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Any]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[http://192.168.1.50:5000/wd/hub]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[http://www.google.com.vn]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:test.TC_2@4430d82d]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2012-07-30T15:18:37Z" finished-at="2012-07-30T15:18:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="test()[pri:0, instance:test.TC_2@4430d82d]" name="test" duration-ms="2714" started-at="2012-07-30T15:18:37Z" finished-at="2012-07-30T15:18:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:test.TC_2@4430d82d]" name="afterMethod" is-config="true" duration-ms="1" started-at="2012-07-30T15:18:40Z" finished-at="2012-07-30T15:18:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.TC_2@4430d82d]" name="afterClass" is-config="true" duration-ms="771" started-at="2012-07-30T15:18:40Z" finished-at="2012-07-30T15:18:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- test.TC_2 -->
+    </test> <!-- Chrome test on remote -->
+  </suite> <!-- DemoTestNG -->
+</testng-results>

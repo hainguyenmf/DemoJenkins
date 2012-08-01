@@ -1,0 +1,93 @@
+<project name="ANT_with_ReportNG" default="run" basedir=".">
+
+	<!--==========================================================================-->
+	<!-- global setup -->
+	<!--==========================================================================-->
+	<!-- setting up dir path -->
+	<property name="classes.dir" value="${basedir}/bin" />
+	<property name="src.dir" value="${basedir}/src" />
+	<property name="report.dir" value="${basedir}/reports" />
+	<property name="logs.dir" value="${basedir}/logs" />
+	<property name="browser" value="/Applications/firefox.app"/>
+
+	<!-- setting up libs classpath -->
+	<path id="libs.cp">
+		<fileset dir="${basedir}\libs">
+			<include name="*.jar"/>
+		</fileset>
+		<pathelement path="${basedir}\${classes.dir}"/>
+	</path>
+
+	<path id="compile.cp">
+		<pathelement location="${basedir}/libs/testng.jar"/>
+	</path>
+	
+	<path id="run.cp">
+		<path refid="compile.cp"/>
+		<path refid="libs.cp"/>
+		<pathelement location="${classes.dir}"/>
+	</path>
+	
+	<!--==========================================================================-->
+	<!-- running tasks -->
+	<!--==========================================================================-->
+	<target name="run">
+		<antcall target="init"/>
+		<antcall target="compile"/>
+		<antcall target="runTests"/>
+		<antcall target="openReport"/>
+	</target>
+	
+	<!--==========================================================================-->
+	<!-- defining tasks -->
+	<!--==========================================================================-->
+
+	
+	<!-- Delete old data and create new directories -->
+	<target name="init" >
+		<echo>Initlizing...</echo>
+		<delete dir="${classes.dir}" />
+		<mkdir dir="${classes.dir}"/>
+		<delete dir="${report.dir}" />
+		<mkdir dir="${report.dir}"/>
+		<delete dir="${logs.dir}" />
+		<mkdir dir="${logs.dir}"/>
+	</target>
+
+	<!-- Complies the java files -->
+	<target name="compile">
+		<echo>Compiling...</echo>
+		<javac debug="true" srcdir="${src.dir}" destdir="${classes.dir}" classpathref="libs.cp" />
+	</target>
+
+	<!-- Runs the file and generates Reportng report -->
+	<target name="runTests" description="Running tests" >
+		<echo>Running Tests...</echo>
+		<!--
+		<taskdef name="testng" classpathref="compile.cp" classname="org.testng.TestNGAntTask"/>
+		<testng classpathref="libs.cp"
+				outputDir="${report.dir}"
+				haltonfailure="true"
+				useDefaultListeners="false"
+>
+			<xmlfileset dir="${basedir}" includes="testng.xml"/>
+		</testng>
+		-->
+	      <java fork="yes"
+	            classpathref="run.cp"
+	            classname="org.testng.TestNG">
+	         <arg value="-d"/>
+	         <arg value="${report.dir}"/>
+	         <arg value="${basedir}/testng.xml"/>
+	         <jvmarg value="-ea"/>
+	      </java>
+	</target>
+
+	<!-- Open the report in browser.-->
+	<target name="openReport"> 
+		<exec executable="${browser}" spawn="yes"> 
+			<arg line="'${report.dir}\html\index.html'" /> 
+		</exec>
+	</target>
+</project>
+

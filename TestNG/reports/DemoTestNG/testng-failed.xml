@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" verbose="3" name="Failed suite [DemoTestNG]" parallel="classes">
+  <parameter name="baseUrl" value="http://www.google.com.vn"/>
+  <parameter name="platform" value="Any"/>
+  <parameter name="nodeUrl" value="http://192.168.1.50:5000/wd/hub"/>
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="version" value="Any"/>
+  <test name="Firefox test on local(failed)" parallel="classes" preserve-order="true">
+    <parameter name="baseUrl" value="http://www.google.com.vn"/>
+    <parameter name="platform" value="Any"/>
+    <parameter name="nodeUrl" value="http://192.168.1.127:5556/wd/hub"/>
+    <parameter name="browser" value="Firefox"/>
+    <parameter name="version" value="Any"/>
+    <classes>
+      <class name="test.TC_2">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="afterMethod"/>
+          <include name="test"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- test.TC_2 -->
+      <class name="test.TC_1">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="afterClass"/>
+          <include name="test"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- test.TC_1 -->
+    </classes>
+  </test> <!-- Firefox test on local(failed) -->
+</suite> <!-- Failed suite [DemoTestNG] -->
